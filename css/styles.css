@@ -1,0 +1,540 @@
+/*Global */
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');*/
+
+:root {
+  --bg-overlay: rgba(0, 0, 0, .8);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+body.menu-open{
+  overflow: hidden;
+}
+.lg-container {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.md-container {
+  max-width: 1200px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.relative {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-overlay, gray);
+}
+.overlay-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body.modal-open{
+  overflow: hidden;
+}
+body.modal-open #modal{
+  left: 0;
+  transform: translate(0,0);
+}
+#modal{
+  position: fixed;
+  transform: translate(-100vw,-100vh);
+  z-index: 9999;
+  transition: all .75s ease-in-out;
+}
+#modal > img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: block;
+  width: 90%;
+  height: 50%;
+  min-width: 200px;
+  min-height: 200px;
+}
+#modal > button{
+  z-index: 50;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: orange;
+  color: #333;
+  height: 40px;
+  width: 40px;
+  display: block;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 1px 1px 15px rgba(255, 255, 255, .2),
+              -1px -1px 15px rgba(255, 255, 255, .2);
+}
+/*Header*/
+.app-header-nav {
+  background-color: #000;
+  color: orange;
+  padding: 10px;
+}
+
+.app-nav-btn {
+  display: none;
+  background-color: orange;
+  color: #000;
+  outline: none;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.nav-close-btn {
+  display: none;
+  background-color: orange;
+  color: #000;
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  border: none;
+  outline: none;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.nav-close-btn i {
+  cursor: pointer;
+}
+
+.app-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-header-nav a {
+  color: inherit;
+}
+
+.app-header-nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.app-header-nav ul li {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media (max-width: 500px) {
+  .app-navigation {
+    width: 100%;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  .app-nav-btn {
+    display: block;
+  }
+
+  .nav-close-btn {
+    display: block;
+  }
+
+  .app-header-nav a {
+    text-decoration: none;
+  }
+
+  .app-header-nav ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 6;
+    transform: translateY(-100vh);
+    transition: transform .75s;
+    background-color: #000;
+  }
+
+  .app-header-nav ul.menu {
+    transform: translateY(0);
+  }
+
+  .app-header-nav ul li {
+    margin: 10px 0;
+  }
+}
+
+.app-header-main {
+  height: 400px;
+  background-image: url("../img/header2.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: orange;
+  text-align: center;
+  transition: all .5s;
+}
+
+.app-header-main h1 {
+  position: relative;
+  z-index: 2;
+}
+
+.app-header-main  p {
+  z-index: 2;
+  position: relative;
+  margin-top: 10px;
+  font-size: 17px;
+}
+
+.app-header-main .about-main{
+  position: absolute;
+  z-index: 3;
+  bottom: -50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #333;
+}
+.app-header-main img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  padding: 5px;
+  border: 5px solid orange;
+}
+
+/*Main*/
+.app-bio {
+  text-align: center;
+  margin-top: 120px;
+}
+.app-bio p{
+  margin-bottom: 10px;
+}
+.app-about {
+  padding: 50px 10px;
+}
+
+.app-about p {
+  color: #333;
+  margin: 10px;
+  line-height: 1.5;
+}
+.app-about ul{
+  list-style: none;
+  padding: 10px;
+}
+.app-about ul li{
+  display: flex;
+  align-items: baseline;
+}
+.app-about ul li i {
+  color: orange;
+}
+.app-skills code {
+  display: block;
+  background-color: #333;
+  padding: 15px;
+  color: #fff;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.app-skills code span {
+  color: orange;
+  text-transform: uppercase;
+}
+
+.app-skills section h3 {
+  margin-bottom: 20px;
+}
+
+.app-skills progress {
+  display: block;
+  width: 100%;
+  -moz-appearance: none;
+  -ms-progress-appearance: unset;
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: 10px;
+}
+
+.progress-container {
+  width: 90%;
+  margin-top: 5px;
+}
+
+.c-progress {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  background-color: orange;
+  height: 100%;
+  width: 0;
+  text-align: end;
+  line-height: 15px;
+  color: #000;
+  font-weight: bold;
+  padding: 15px;
+  transition: all 1.5s;
+}
+
+.app-skills .app-main-bg {
+  padding: 10px;
+}
+
+.app-main-bg h3 {
+  color: orange;
+}
+
+.app-skills .app-languages>div {
+  margin: 10px 10px 25px;
+  color: #555;
+}
+
+.app-work {
+  padding: 50px 10px;
+}
+
+.app-work h2 {
+  margin-bottom: 15px;
+}
+
+.app-work button {
+  border: 1px solid #333;
+  background-color: #fff;
+  color: #333;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  margin: 5px;
+}
+.app-work button:hover{
+  background-color: #eee;
+}
+.app-work-img{
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.app-work-img img{
+  min-width: 200px;
+  min-height: 200px;
+  max-height: 400px;
+  max-width: 400px;
+  margin: 10px;
+  object-fit: cover;
+  cursor: pointer;
+  display: block;
+}
+.app-github{
+  padding: 50px 10px;
+
+}
+.app-github video{
+  object-fit: cover;
+}
+.app-github h2{
+  color: orange;
+  position: relative;
+  z-index: 4;
+}
+.app-github #repos{
+  position: relative;
+  z-index: 4;
+  padding: 10px;
+  display: flex;
+  overflow-y: auto;
+}
+.app-github .repo{
+  padding: 10px;
+  margin: 5px;
+  display: block;
+  min-width: 300px;
+  background-color: #333;
+  color: #ccc;
+}
+.app-github .repo > div{
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.app-github .repo h3{
+  color: orange;
+}
+.app-github .repo time{
+  padding: 5px;
+}
+.app-github .repo p {
+  padding: 5px;
+  line-height: 1.5;
+}
+.app-github time{
+  display: block;
+  margin-left: auto;
+}
+.app-github a{
+  text-decoration: none;
+  background-color: orange;
+  color: #333;
+  padding: 10px;
+  margin-top: 5px;
+  margin-left: auto;
+  display: block;
+  width: max-content;
+  border-radius: 9999px;
+}
+.app-links{
+  padding: 50px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.app-links h2{
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.app-links > div{
+  padding: 10px;
+}
+.app-links  img{
+  min-width: 250px;
+  object-fit: cover;
+  max-width: 500px;
+}
+.app-links ul{
+  list-style: none;
+}
+.app-links ul li{
+  display: flex;
+  align-items: baseline;
+  margin: 10px;
+  color: #444;
+}
+.app-links ul li:hover{
+  color: #000;
+}
+.app-links ul li i{
+  margin-right: 10px;
+  color: #000;
+}
+.app-links a{
+  text-decoration: none;
+  color: inherit;
+}
+/*footer*/
+.app-footer > section:last-of-type{
+  background-color: #222;
+  padding: 20px 10px;
+  color: #fff;
+  text-align: center;
+}
+.app-contact{
+  display: flex;
+  align-items: center;
+  flex-wrap:wrap ;
+}
+.tags{
+  display: flex;
+  flex: 1;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+.tags > div{
+  padding: 10px;
+  border: 1px solid orange;
+  margin: 5px;
+}
+.app-contact > div:last-of-type{
+  flex: 2;
+  min-width: 300px;
+}
+.app-footer > section:first-of-type{
+  background-color: #333;
+  color: orange;
+  padding: 50px 10px;
+}
+.app-footer > section:first-of-type h2{
+  text-align: center;
+  margin-top: 20px;
+}
+.app-footer > section:first-of-type  form{
+  width: 100%;
+  max-width: 700px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.app-footer > section:first-of-type  form > *{
+  width: 100%;
+}
+.app-footer > section:first-of-type  form > label{
+  margin-bottom: 5px;
+}
+.app-footer > section:first-of-type  form > input,
+.app-footer > section:first-of-type  form > textarea{
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  border-radius: 3px;
+  border: 1px solid  #333;
+  outline: none;
+  background-color: #444;
+  color: orange;
+}
+.app-footer > section:first-of-type  form > textarea{
+  resize: vertical;
+}
+.app-footer > section:first-of-type  form > input[type="submit"]{
+  width: max-content;
+  margin-left: auto;
+  cursor: pointer;
+  background-color: orange;
+  color: #222;
+}

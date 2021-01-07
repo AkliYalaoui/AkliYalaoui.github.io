@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Akli Yalaoui</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body>
+  <div class="lg-container">
+    <header class="app-header">
+      <nav class="app-header-nav">
+        <div class="md-container">
+          <div class="flex">
+            <div class="app-navigation">
+              <h2>Akli Yalaoui</h2>
+              <button class="app-nav-btn" id="nav-btn">
+                <i class="fa fa-bars"></i>
+              </button>
+            </div>
+            <ul>
+              <li>
+                <button class="nav-close-btn">
+                  <i class="fa fa-times fa-lg" id="nav-close"></i>
+                </button>
+              </li>
+              <li>
+                <a href="#aboutMe">about me</a>
+              </li>
+              <li>
+                <a href="#skills">skills</a>
+              </li>
+              <li>
+                <a href="#projects">projects</a>
+              </li>
+              <li>
+                <a href="#github">github</a>
+              </li>
+              <li>
+                <a href="#links">links</a>
+              </li>
+              <li>
+                <a href="#contact">contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <section class="relative app-header-main" id="background">
+        <div class="overlay"></div>
+        <div class="app-header-content">
+          <h1>WEB DEVELOPER</h1>
+          <p>very excited to get my first job <i class="fa fa-heartbeat"></i> </p>
+        </div>
+        <div class="about-main">
+          <img src="./img/header3.jpg" alt="profile">
+        </div>
+      </section>
+    </header>
+    <main>
+      <!--bio-->
+      <section class="md-container app-bio">
+        <p>Very ambitious person who loves to learn new things everyday</p>
+        <a href="https://twitter.com/KoukiYalaoui?ref_src=twsrc%5Etfw"
+        class="twitter-follow-button" 
+        data-show-count="false">
+        Follow @KoukiYalaoui
+      </a>
+      </section>
+      <!-- about me -->
+      <section class="app-about md-container" id="aboutMe">
+        <h2>About me</h2>
+        <ul>
+          <li>
+            <i class="fa fa-home"></i>
+            <p>Lives in <strong>Bejaia,Algeria</strong></p>
+          </li>
+          <li>
+            <i class="fa fa-school"></i>
+            <p>Study in <strong>Higher National School Of Computer Science-Algiers. Esi ex Ini</strong></p>
+          </li>
+          <li>
+            <i class="fa fa-graduation-cap"></i>
+            <p>Third year At <strong>Esi</strong></p>
+          </li>
+          <li>
+            <i class="fa fa-life-ring"></i>
+            <p>General programming since <strong>2018</strong>, started web developpement in <strong>May,2020</strong>
+            </p>
+          </li>
+        </ul>
+      </section>
+      <!-- skills-->
+      <section class="app-skills" id="skills">
+        <div class="md-container">
+          <h2>My skills</h2>
+          <div class="relative code">
+            <button>
+              <i class=""></i>
+            </button>
+            <code>
+              <span>select</span> skill_name,skill_percentage <span>from</span> `skills` <span>order by</span>
+              skill_percentage <span>desc</span>
+            </code>
+          </div>
+        </div>
+        <div class="app-main-bg">
+          <section class="app-languages md-container">
+            <div>
+              <h4>HTML5</h4>
+              <div class="relative progress-container">
+                <progress value="70" max="100"></progress>
+              </div>
+            </div>
+            <div>
+              <h4>CSS3</h4>
+              <div class="relative progress-container">
+                <progress value="60" max="100"></progress>
+              </div>
+            </div>
+            <div>
+              <h4>JAVASCRIPT</h4>
+              <div class="relative progress-container">
+                <progress value="70" max="100"></progress>
+              </div>
+            </div>
+            <div>
+              <h4>PHP</h4>
+              <div class="relative progress-container">
+                <progress value="73" max="100"></progress>
+              </div>
+            </div>
+            <div>
+              <h4>MYSQL</h4>
+              <div class="relative progress-container">
+                <progress value="40" max="100"></progress>
+              </div>
+            </div>
+            <div>
+              <h4>LARAVEL</h4>
+              <div class="relative progress-container">
+                <progress value="60" max="100"></progress>
+              </div>
+            </div>
+            <div>
+              <h4>VUE JS</h4>
+              <div class="relative progress-container">
+                <progress value="71" max="100"></progress>
+              </div>
+            </div>
+            <div>
+              <h4>TAILWIND CSS</h4>
+              <div class="relative progress-container">
+                <progress value="88" max="100"></progress>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+      <!-- previous work -->
+      <section class="app-work md-container" id="projects">
+        <h2>My previous work</h2>
+        <div>
+          <div class="app-work-btn">
+            <button data-btn="all">all</button>
+            <button data-btn="clones">website clones</button>
+            <button data-btn="laravel">laravel</button>
+            <button data-btn="laravel-vue">laravel && vue</button>
+            <button data-btn="php">php</button>
+            <button data-btn="vue">vue</button>
+            <button data-btn="js">js</button>
+          </div>
+          <div class="app-work-img">
+            <img src="./work/javascript/1.png" alt="snake game" data-type="js">
+            <img src="./work/clones/1.png" alt="twitter clone" data-type="clones">
+            <img src="./work/clones/2.png" alt="website clone" data-type="clones">
+            <img src="./work/clones/3.jpg" alt="happy birthday" data-type="js">
+          </div>
+        </div>
+      </section>
+      <!--github-->
+      <section class="app-github relative" id="github">
+        <img src="./img/goran-ivos-idmvPhF8t4E-unsplash.jpg" class="overlay-absolute"></img>
+        <div class="overlay"></div>
+        <h2 class="md-container">Latest github repos</h2>
+        <div id="repos" class="md-container">
+
+        </div>
+      </section>
+      <!--links-->
+      <section class="md-container app-links" id="links">
+        <img src="./img/social.jpg" alt="social media">
+        <div>
+          <h2>Useful links</h2>
+          <ul>
+            <li>
+              <i class="fab fa-github fa-lg fa-fw"></i>
+              <a href="https://github.com/AkliYalaoui">Github</a>
+            </li>
+            <li>
+              <i class="fab fa-instagram fa-lg fa-fw"></i>
+              <a href="https://github.com/AkliYalaoui">Instagram</a>
+            </li>
+            <li>
+              <i class="fab fa-twitter fa-lg fa-fw"></i>
+              <a href="https://github.com/AkliYalaoui">Twitter</a>
+            </li>
+            <li>
+              <i class="fab fa-facebook fa-lg fa-fw"></i>
+              <a href="https://github.com/AkliYalaoui">Facebook</a>
+            </li>
+            <li>
+              <i class="fa fa-envelope fa-lg fa-fw"></i>
+              <span>akliyalaoui16@gmail.com</span>
+            </li>
+        </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="app-footer" id="contact">
+      <section>
+        <div class="md-container app-contact">
+          <div class="tags">
+            <div>vue</div>
+            <div>javascript</div>
+            <div>html</div>
+            <div>php</div>
+            <div>mysql</div>
+            <div>laravel</div>
+            <div>npm</div>
+            <div>git</div>
+            <div>github</div>
+            <div>css</div>
+            <div>css3</div>
+            <div>html5</div>
+            <div>tailwind css</div>
+          </div>
+          <div >
+            <h2>Get in touch with me</h2>
+            <form>
+              <label for="email">email</label>
+              <input type="email" id="email">
+  
+              <label for="subject">subject</label>
+              <input type="text" id="subject">
+  
+              <label for="message"></label>
+              <textarea id="message"></textarea>
+  
+              <input type="submit" value="contact">
+            </form>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="md-container">
+          Made with &hearts; by Akli Yalaoui <span id="year"></span>&copy;
+        </div>
+      </section>
+    </footer>
+    <div id="modal" class="overlay">
+      <button id="close-modal">
+          <i class="fa fa-times"></i>
+      </button>
+    </div>
+  </div>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+  <script src="js/app.js"></script>
+</body>
+
+</html>
