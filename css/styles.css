@@ -1,5 +1,5 @@
 /*Global */
-/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
 
 :root {
   --bg-overlay: rgba(0, 0, 0, .8);
@@ -99,6 +99,29 @@ body.modal-open #modal{
   cursor: pointer;
   box-shadow: 1px 1px 15px rgba(255, 255, 255, .2),
               -1px -1px 15px rgba(255, 255, 255, .2);
+}
+#notice{
+  position: fixed;
+  z-index: 9999;
+  bottom: 10px;
+  right: 10px;
+  background-color: #000;
+  border-radius: 5px;
+  color: orange;
+  padding: 10px;
+}
+#notice button{
+  display: block;
+  margin-top: 5px;
+  margin-left: auto;
+  width: 50px;
+  color: black;
+  background-color: orange;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 2px;
+  border: none;
+  outline: none;
 }
 /*Header*/
 .app-header-nav {
@@ -289,16 +312,25 @@ body.modal-open #modal{
   margin-bottom: 20px;
 }
 
-.app-skills progress {
-  display: block;
-  width: 100%;
-  -moz-appearance: none;
-  -ms-progress-appearance: unset;
-  -webkit-appearance: none;
-  appearance: none;
-  margin-top: 10px;
+.app-languages > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px 10px 25px;
+  color: #555;
 }
-
+.app-languages > div > h4{
+  margin-bottom: 10px;
+}
+.app-languages > div > h4::before{
+  content: "+ ";
+  font-weight: 900;
+  font-size: 20px;
+  color: orange;
+}
+.app-languages .stars{
+  margin-left: 15px;
+}
 .progress-container {
   width: 90%;
   margin-top: 5px;
@@ -325,11 +357,6 @@ body.modal-open #modal{
 
 .app-main-bg h3 {
   color: orange;
-}
-
-.app-skills .app-languages>div {
-  margin: 10px 10px 25px;
-  color: #555;
 }
 
 .app-work {

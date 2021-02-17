@@ -1,4 +1,9 @@
 window.addEventListener('load', function () {
+  //dev mode notice
+  const notice = document.getElementById('notice');
+  notice.querySelector('button').addEventListener('click', function () {
+    this.parentElement.remove();
+  })
   //header background images
   let imageIndex = 3;
   const background = document.getElementById('background');
@@ -17,37 +22,6 @@ window.addEventListener('load', function () {
       imageIndex = 1;
     }
   }, 10000);
-  //skills progress bars
-  const skills = Array.from(document.querySelectorAll('#skills progress'));
-
-  skills.forEach(progress => {
-    let div = document.createElement('div'),
-      width = progress.getAttribute('value') + "%";
-    div.className = "c-progress";
-    div.appendChild(document.createTextNode(width));
-    div.setAttribute('aria-hidden', "true");
-
-    progress.parentElement.appendChild(div);
-  });
-
-  if (window.scrollY >= (document.getElementById('skills').offsetTop) / 2) {
-    skills.forEach(progress => {
-      progress.nextElementSibling.style.width = progress.getAttribute('value') + "%";
-    });
-  }
-
-  window.addEventListener('scroll', function () {
-    if (window.scrollY >= (document.getElementById('skills').offsetTop) / 2) {
-      skills.forEach(progress => {
-        progress.nextElementSibling.style.width = progress.getAttribute('value') + "%";
-      });
-    } else {
-      skills.forEach(progress => {
-        progress.nextElementSibling.style.width = "0";
-      });
-    }
-  });
-
   //navigation menu
   const navBtn = document.getElementById('nav-btn');
   navBtn.addEventListener('click', function () {
